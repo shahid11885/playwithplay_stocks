@@ -1,0 +1,24 @@
+@*
+ * This template takes a single argument, a String containing a
+ * message to display.
+ *@
+@(message: String)
+
+@*
+ * Call the `main` template with two arguments. The first
+ * argument is a `String` with the title of the page, the second
+ * argument is an `Html` object containing the body of the page.
+ *@
+
+
+<section id="top">
+    <div class="wrapper">
+        <h1>Login</h1>
+    </div>
+    <form action="/login">
+        <label>Consumer Key    : </label><input type="text" name="consumerKey"/><br/>
+        <label>Consumer Secret : </label><input type="text" name="consumerSecret"/>
+        <input type="submit"/>
+    </form>
+</section>
+

@@ -1,0 +1,31 @@
+@import model.Account
+
+@*
+ * This template takes a single argument, a String containing a
+ * message to display.
+ *@
+@(accounts: Array[Account])
+
+
+@*
+ * Call the `main` template with two arguments. The first
+ * argument is a `String` with the title of the page, the second
+ * argument is an `Html` object containing the body of the page.
+ *@
+
+
+<section id="top">
+    <div class="wrapper">
+        <h1>Accounts</h1>
+    </div>
+    <table >
+      @for(a <- accounts) {
+        <tr>
+            <td>@a.getAccountID()</td>
+            <td>@a.getAccountName()</td>
+            <td>@a.getBalance()</td>
+        </tr>
+        }
+    </table>
+</section>
+
